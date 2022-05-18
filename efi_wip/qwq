@@ -1,0 +1,18 @@
+https://libredd.it/r/VFIO/comments/othzvr/cant_fix_error_43_on_single_gpu_passthrough/
+vfio_region_write failed: Device or resource busy
+
+https://www.reddit.com/r/VFIO/comments/gq99s8/igd_passthrough_graphic_output_works_but_heavily/
+https://www.reddit.com/r/VFIO/comments/ks7ve3/alternative_to_efifboff/
+
+cat /proc/iomem
+echo "efi-framebuffer.0" > /sys/bus/platform/devices/efi-framebuffer.0/driver/unbind
+
+[  557.627578] DMAR: DRHD: handling fault status reg 2
+[  557.627586] DMAR: [DMA Write] Request device [00:02.0] PASID ffffffff fault addr 0 [fault reason 02] Present bit in context entry is clear
+[  557.630694] DMAR: DRHD: handling fault status reg 3
+[  557.630702] DMAR: [DMA Read] Request device [00:02.0] PASID ffffffff fault addr 98000000 [fault reason 06] PTE Read access is not set
+[  557.631257] DMAR: DRHD: handling fault status reg 3
+[  557.631261] DMAR: [DMA Read] Request device [00:02.0] PASID ffffffff fault addr 9803e000 [fault reason 06] PTE Read access is not set
+[  557.632405] DMAR: DRHD: handling fault status reg 3
+
+
