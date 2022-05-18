@@ -82,6 +82,13 @@ vfio_pci
     <qemu:arg value="name=opt/igd-bdsm-size,file=/usr/share/vgabios/bdsmSize.bin"/>
 ```
 
+# Test Platform
+1. `QEMU emulator version 4.2.1 (Debian 1:4.2-3ubuntu6.21)`
+2. `Linux i7-6700 5.13.0-41-generic #46~20.04.1-Ubuntu SMP Wed Apr 20 13:16:21 UTC 2022 x86_64 x86_64 x86_64 GNU/Linux`
+3. Asus B150M-PLUS D3 with 32G 1600MHz DDR3 Ram
+4. i7-6700 (HD530 Graphics)
+5. GTX970
+
 # References
 1. https://github.com/patmagauran/i915ovmfPkg
 2. https://wiki.archlinux.org/title/Intel_GVT-g
