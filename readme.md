@@ -26,6 +26,12 @@ vfio_pci
 ```
 5. Update GRUB and initramfs with `update-grub` and `update-initramfs -u`.
 6. Reboot.
+7. For unknown reason, the EFIFB module keeps using memory allocated to the iGPU, which prevents the passthrough from working. To workaround this, run the following command as root:
+```
+# In my case, the EFIFB uses the iGPU, so we have to unbind it.
+# Check `cat /proc/iomem`, look for PCILOC and assigned driver.
+echo "efi-framebuffer.0" > /sys/bus/platform/devices/efi-framebuffer.0/driver/unbind
+```
 
 # VM Creation
 1. Install libvirt and QEMU, Google it if you are unsure about this!
