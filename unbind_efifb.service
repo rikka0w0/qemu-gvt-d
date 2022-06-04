@@ -1,0 +1,10 @@
+[Unit]
+Description=Unbind EFIFB
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/sh -c "echo \"efi-framebuffer.0\" > /sys/bus/platform/devices/efi-framebuffer.0/driver/unbind"
+
+[Install]
+WantedBy=multi-user.target
+
