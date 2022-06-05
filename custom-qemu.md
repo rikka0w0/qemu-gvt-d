@@ -8,7 +8,7 @@ git clone https://gitlab.com/qemu-project/qemu.git\
 cd qemu
 git submodule init
 git submodule update --recursive
-./configure --enable-kvm --enable-spice --enable-libusb --enable-usb-redir --enable-opengl --enable-pa --audio-drv-list=pa
+./configure --target-list=x86_64-softmmu --enable-kvm --enable-spice --enable-libusb --enable-usb-redir --enable-opengl --enable-pa --audio-drv-list=pa
 make -j8
 ```
 
