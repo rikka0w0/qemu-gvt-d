@@ -25,6 +25,7 @@ make -j8
     ....
   </qemu:commandline>
 ```
+change to `/usr/local/bin/qemu-system-x86_64` and `/usr/local/share/qemu/` if you prefer `make install`.
 
 # Fix Apparmor:
 ## `/etc/apparmor.d/usr.sbin.libvirtd`
