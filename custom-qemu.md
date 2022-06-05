@@ -3,12 +3,12 @@ __Replace `~` with your actual path, in my case, is my home folder.__
 # Compile:
 ```
 cd ~
-sudo apt install ninja-build libglib libpixman-1-dev libspice-server-dev libusbredirparser-dev libusb-1.0-0-dev 
+sudo apt install ninja-build libglib libpixman-1-dev libspice-server-dev libusbredirparser-dev libusb-1.0-0-dev libpulse-dev libepoxy-dev
 git clone https://gitlab.com/qemu-project/qemu.git\
 cd qemu
 git submodule init
 git submodule update --recursive
-./configure --enable-spice --enable-libusb --enable-usb-redir --enable-opengl
+./configure --enable-kvm --enable-spice --enable-libusb --enable-usb-redir --enable-opengl --enable-pa --audio-drv-list=pa
 make -j8
 ```
 
